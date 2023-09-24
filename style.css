@@ -1,0 +1,29 @@
+.contenedor{
+display: flex;
+justify-content: center;
+height: 100vh;
+}
+.conteiner-card{
+    display: flex;
+    flex-wrap:wrap ;
+    width: 47%;
+}
+.cards{
+   
+    border: 1px solid #ccc;
+   
+    margin: 10px;
+    width: 30%;
+    height:51% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+  
+  .img{
+    width: 100%;
+  }
+  .titulo{
+    font-size: 1rem;
+  }
