@@ -1,24 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>Rick and Morty</title>
+    <link rel="stylesheet" href="style.css"> <!-- Agrega tu propio archivo de estilos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
-<body>
-    <button id="prevButton">Anterior</button>
-    <button id="nextButton">Siguiente</button>
-    <div id="contenedor" class="contenedor">
-       
-    <div id="cardsContainer" class="conteiner-card">
-       
 
-    </div>
-   
-    </div>
+<body>
+    <div class="contenedor">
+        <div class="container  ">
+            <h1 class="text-center text-white pt-5 pb-5">Explora el Universo de Rick and Morty</h1>
+            
+            <div class="search-container d-flex justify-content-center ">
+           
+                <div class="input-group w-50">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Nombre del personaje">
+                    <button id="searchButton" class="btn btn-primary">Buscar</button>
+                </div>
+            </div>
     
+            <div class="text-center">
+                <button id="prevButton" class="btn btn-secondary mx-1">Anterior</button>
+                <button id="nextButton" class="btn btn-secondary mx-1">Siguiente</button>
+            </div>
+    
+            <div id="cardsContainer" class="row row-cols-1 row-cols-md-3 g-4 mt-4 flex justify-content-center">
+                <!-- Contenido de las tarjetas se añadirá dinámicamente aquí -->
+            </div>
+        </div>
+    </div>
+  
+
     <script src="Miaplicacion.js"></script>
 </body>
+
 </html>

@@ -1,29 +1,46 @@
+/* style.css */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
 .contenedor{
-display: flex;
-justify-content: center;
-height: 100vh;
+ 
+ background-image:url('img-1.jpg');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+
 }
-.conteiner-card{
-    display: flex;
-    flex-wrap:wrap ;
-    width: 47%;
+.container {
+  max-width: 800px; 
+  background-color: #0000006e;/* Ajusta el ancho máximo del contenido según tu diseño */
 }
+h2{
+  font-size: 1rem !important;
+}
+
+
 .cards{
-   
-    border: 1px solid #ccc;
-   
-    margin: 10px;
-    width: 30%;
-    height:51% ;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    }
-  
-  .img{
-    width: 100%;
-  }
-  .titulo{
-    font-size: 1rem;
-  }
+  background-color: white;
+  width: 324px !important;
+  margin: 10px;
+  border-radius: 10px;
+}
+img{
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.search-container {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+/* Agrega estilos adicionales según tus preferencias */

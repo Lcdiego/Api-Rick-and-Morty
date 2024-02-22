@@ -1,13 +1,18 @@
 const cardsContainer = document.getElementById("cardsContainer");
 const prevButton = document.getElementById("prevButton");
 const nextButton = document.getElementById("nextButton");
+const searchInput = document.getElementById("searchInput");
+const searchButton = document.getElementById("searchButton");
 const apiUrl = "https://rickandmortyapi.com/api/character";
 let currentPage = 1;
 
+
+
+
 // Función para cargar personajes de una página específica
-async function loadCharacters(page) {
+async function loadCharacters(page, busqueda = "") {
   try {
-    const response = await fetch(`${apiUrl}?page=${page}`);
+    const response = await fetch(`${apiUrl}?page=${page}&name=${busqueda}`);
     const data = await response.json();
 console.log(data.results)
     // Limpia el contenedor antes de agregar nuevos personajes
@@ -57,7 +62,18 @@ console.log(data.results)
     console.error('Ocurrió un error:', error);
   }
 }
+searchButton.addEventListener("click", () => {
+  currentPage = 1; // Reinicia la página al realizar una nueva búsqueda
+  loadCharacters(currentPage, searchInput.value);
+});
 
+// También podrías añadir un evento para realizar la búsqueda al presionar Enter en el input
+searchInput.addEventListener("keyup", (event) => {
+  if (event.key === "Enter") {
+    currentPage = 1; // Reinicia la página al realizar una nueva búsqueda
+    loadCharacters(currentPage, searchInput.value);
+  }
+});
 // Cargar la página inicial
 loadCharacters(currentPage);
 
